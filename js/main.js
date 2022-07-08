@@ -73,7 +73,7 @@ $(document).ready(function() {
     $('.testimonials-carousel').owlCarousel({
         loop:true,
         margin:0,
-        // autoplay:true,
+        autoplay:true,
         responsiveClass:true,
         responsive:{
             0:{
