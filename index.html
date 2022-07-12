@@ -15,7 +15,7 @@
   </head>
   <body>
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-md fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
       <!-- Brand -->
       <div class="container">
         <a class="navbar-brand" href="index.html">Shala app</a>
@@ -27,29 +27,32 @@
           data-toggle="collapse"
           data-target="#collapsibleNavbar"
         >
-          <span class="navbar-toggler-icon"></span>
+          <i class="fas fa-bars"></i>
         </button>
 
         <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="#">home</a>
+              <a class="nav-link active" data-scroll-nav="0" href="#">home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">features</a>
+              <a class="nav-link" data-scroll-nav="1" href="#">features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">screenshots</a>
+              <a class="nav-link" data-scroll-nav="2" href="#">screenshots</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">testimonials</a>
+              <a class="nav-link" data-scroll-nav="3" href="#">downloads</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">home</a>
+              <a class="nav-link" data-scroll-nav="4" href="#">testimonials</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">contact</a>
+              <a class="nav-link" data-scroll-nav="5" href="#">pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-scroll-nav="6" href="#">contact</a>
             </li>
           </ul>
         </div>
@@ -59,7 +62,7 @@
     <!-- Navbar End -->
 
     <!-- Home Section Start -->
-    <section class="home d-flex align-items-center">
+    <section class="home d-flex align-items-center" id="home" data-scroll-index="0">
       <div class="effect-wrap">
         <i class="fas fa-plus effect effect-1"></i>
         <i class="fas fa-plus effect effect-2"></i>
@@ -76,8 +79,8 @@
                 Voluptatibus, aspernatur!
               </p>
               <div class="home-btn">
-                <a href="#" class="btn btn-1">download app</a>
-                <button type="button" class="btn btn-1 video-play-btn">
+                <a href="#" data-scroll-goto="3" class="btn btn-1">download app</a>
+                <button type="button"  class="btn btn-1 video-play-btn">
                   <i class="fas fa-play"></i>
                 </button>
               </div>
@@ -96,7 +99,7 @@
     <!-- Home Section Ends -->
 
     <!-- Features Section Start -->
-    <section class="features section-padding">
+    <section class="features section-padding" id="features" data-scroll-index="1">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
@@ -198,7 +201,7 @@
     <!-- Fun-facts Section End -->
 
     <!-- App Screenshots Section Start -->
-    <section class="app-screenshots section-padding">
+    <section class="app-screenshots section-padding" id="screenshots" data-scroll-index="2">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
@@ -237,7 +240,7 @@
     <!-- App Screenshots Section End -->
     <!-- App Download Section Start -->
 
-    <section class="app-download section-padding">
+    <section class="app-download section-padding" data-scroll-index="3">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
@@ -351,7 +354,7 @@
     <!-- How It Works Section End -->
 
     <!-- Testimonials Section Start -->
-    <section class="testimonials section-padding">
+    <section class="testimonials section-padding" id="testimonials" data-scroll-index="4">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
@@ -453,16 +456,16 @@
 
     <!-- Pricing sectio Start -->
 
-    <section class="pricing section-padding">
+    <section class="pricing section-padding" id="pricing" data-scroll-index="5">
       <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
           <div class="col-lg-8">
             <div class="section-title">
               <h2>pricing <span>plan</span></h2>
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
           <div class="col-lg-4 col-md-6">
             <div class="pricing-plan">
               <div class="pricing-header">
@@ -683,7 +686,7 @@
     <!-- FAq section End -->
 
     <!-- Contact section start -->
-    <section class="contact section-padding">
+    <section class="contact section-padding" data-scroll-index="6">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
@@ -766,9 +769,67 @@
     </section>
 
     <!-- Contact section End -->
+
     <!-- Footer Section Start -->
-    
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-col">
+              <h3>About USs</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam voluptate, eos deserunt consequuntur labore exercitationem nostrum enim velit iure aliquam.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-col">
+              <h3>company</h3>
+              <ul>
+                <li><a href="#">privacy policy</a></li>
+                <li><a href="#">terms and conditions</a></li>
+                <li><a href="#">lates blogs</a></li>
+                <li><a href="#">app services</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-col">
+              <h3>quick links</h3>
+              <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#features">features</a></li>
+                <li><a href="#screenshots">screenshots</a></li>
+                <li><a href="#pricing">pricing</a></li>
+                <li><a href="#testimonials">testimonials</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-col">
+              <h3>social pages</h3>
+              <ul>
+                <li><a href="#">facebook</a></li>
+                <li><a href="#">twitter</a></li>
+                <li><a href="#">instageam</a></li>
+                <li><a href="#">linkedin</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="copyright-text">&copy;2021 @      The Webshala</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer Section End -->
+
+    <!-- Toggle Theme  Start Light  & DArk Mode-->
+    <div class="toggle-theme">
+
+    </div>
+    <!-- Toggle Theme  End -->
 
     <!-- Video Pop Up Start -->
 

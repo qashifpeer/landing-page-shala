@@ -111,4 +111,13 @@ $(document).ready(function() {
             }
         }
     });
+    /*-------------------Page Scrollling - ScrollIT----------*/
+    $.scrollIt({
+        topOffset:  -50
+
+    });
+    /*-------------------------- NAV COLLAPSE-------------------------*/
+    $(".nav-link").on("click",function(){
+        $(".navbar-collapse").collapse("hide");
+    });
 });

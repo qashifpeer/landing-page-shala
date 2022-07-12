@@ -1007,3 +1007,141 @@ CONTACT SECTION
  .contact-form .form-control:focus{
     border-color: var(--main-color);
  }
+
+ /* ---------------------------------------
+ Footer Section
+ ---------------------------------------- */
+ .footer{
+    background-color: var(--main-color);
+    padding: 50px 0 0;
+ }
+ 
+
+ .footer-col h3{
+    font-size: 20px ;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0 0 25px;
+    text-transform: capitalize;
+ }
+ .footer-col p{
+    font-size: 1rem;;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    line-height: 26px;
+    margin: 0;
+ }
+
+ .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+ }
+ .footer-col ul li a{
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    display: block;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    text-decoration: none;
+ }
+ .footer-col ul li a:hover{
+    padding-left: 5px;
+ }
+ .footer .copyright-text{
+    padding: 20px 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    font-size: 1rem;
+    margin: 50px 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+
+ }
+
+ /* **************************************
+ RESPONSIVE
+ ***************************************** */
+ @media(max-width:991px){
+    .navbar-toggler{
+        background-color: var(--dark-to-main-color);
+        box-shadow: var(--shadow-black-300);
+        height: 34px;
+        width: 44px;
+        padding: 0;
+        font-size: 17px;
+        color: #ffffff;
+    }
+    .navbar-nav{
+        background-color: var(--dark-to-main-color);
+        box-shadow: var(--shadow-black-300);
+    }
+    .navbar .nav-item{
+        margin: 0;
+        padding: 5px 15px;
+    }
+    .navbar.navbar-shrink .navbar-toggler,
+    .navbar.navbar-shrink .navbar-nav{
+        background-color: var(--main-color);
+    }
+    .home--mg .circle{
+        height: 320px;
+        width: 320px;
+    }
+    .home--mg .circle::before{
+        left: 18px;
+        top: 18px;
+        transform-origin: 142px 142px;
+    }
+    .home-text h1{
+        font-size: 40px;
+    }
+    .pricing-plan,
+    .how-it-works-item,
+    .app-download-item{
+        margin-bottom: 30px;
+    }
+    .how-it-works-item.line-right::before{
+        content: none;
+    }
+    .how-it-works-item{
+        box-shadow: var(--shadow-black-100);
+        border-radius: 10px;
+
+    }
+    .footer-col{
+        margin-bottom: 30px;
+     }
+
+ }
+
+ @media(max-width:767px){
+    .home-text{
+    margin-bottom: 80px;
+    }
+    .fun-facts-img{
+        margin-bottom: 30px;
+
+    }
+    .contact-form{
+        margin-top: 20px;
+    }
+    .section-title h2{
+        font-size: 35px;
+    }
+    .fun-facts .section-title h2{
+        text-align: center;  
+    }
+  
+ }
+ @media(max-width:575px){
+    .home-text h1{
+    margin-bottom: 30px;
+    }
+    .home-text p{
+        font-size: 16px;
+    }
+    .section-title h2{
+        font-size: 30px;
+    }
+
+ }
