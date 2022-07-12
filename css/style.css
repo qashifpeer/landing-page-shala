@@ -33,6 +33,18 @@ body{
     overflow-x: hidden;
     background-color: #ffffff;
     line-height: 1.5;
+    --shadow-900:#ffffff;
+    --black-400: #bbbbbb;
+}
+body.dark{
+    background-color: var(--bg-dark);
+    --black-100: var(--bg-dark);
+    --black-000: var(--bg-dark);
+    --main-to-dark-color: var(--bg-dark);
+    --dark-to-main-color: var(--main-color);
+    --shadow-black-100:var(--shadow-black-300);
+    --black-alfa-100:rgba(255,255,255,0.05);
+
 }
 
 *{
@@ -125,6 +137,16 @@ ul{
         }
 }
 
+@keyframes zoomInOut_01{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
 .effect-wrap .effect{
     position: absolute;
     z-index: -1;
@@ -160,7 +182,7 @@ ul{
 }
 .section-title h2{
     font-size: 40px;
-    color: var(--black-900);
+    color: var(--black-400);
     font-weight: 700;
     text-transform: capitalize;
     text-align: center;
@@ -186,6 +208,33 @@ ul{
 .owl-carousel button.owl-dot.active{
     background-color: var(--main-color);
 }
+
+/* ------------------------------------------
+Pre -Loader
+-------------------------------------------- */
+.preloader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2100;
+    background-color: var(--main-to-dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader span{
+    display: block;
+    height: 60px;
+    width: 60px;
+    background-color: var(--dark-to-main-color);
+    border-radius: 50%;
+    animation: zoomInOut_01 1s ease infinite;
+
+}
+
 /* -----------------
 Navbar
 ------------------ */
@@ -252,6 +301,7 @@ Home Section
     border-radius: 0 0 200px 0;
     position: relative;
     z-index: 1;
+    overflow-x: hidden;
     
 
 }
@@ -1057,6 +1107,31 @@ CONTACT SECTION
     text-align: center;
 
  }
+
+ /* ---------------------------------
+ Toggle theme Light And Dark
+ -------------------------------------- */
+ .toggle-theme{
+    position: fixed;
+    right: 0;
+    top:calc(50% - 20px);
+    height: 40px;
+    width: 40px;
+    background-color: var(--dark-to-main-color);
+    z-index: 1200;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: var(--shadow-black-300);
+    font-size: 16px;
+    text-align: center;
+
+ }
+ .toggle-theme i{
+    line-height: 40px;
+
+ }
+
 
  /* **************************************
  RESPONSIVE
